@@ -45,12 +45,10 @@
       <h3><?= $row['nombre'] ?></h3>
       <p><?= $row['descripcion'] ?></p>
       <strong>$<?= $row['precio'] ?></strong>
-      <form method="post" action="includes/LS_agregarcarrito.php">
-        <input type="hidden" name="id" value="<?= $row['id'] ?>">
-        <button type="submit">Añadir al carrito</button>
-      </form>
+      <button class="add-to-cart" data-id="<?= $row['id'] ?>">Añadir al carrito</button>
     </div>
   <?php endwhile; ?>
+  </div>
 </main>
 </body>
 </html>
